@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-RESULTS_DIR = "pairs_results"
+RESULTS_DIR = "results_sp500"
 
 # the realistic version (trade one day after the signal), committed capital
 MAIN_COLUMNS = [

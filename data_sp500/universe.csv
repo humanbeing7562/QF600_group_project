@@ -1,0 +1,501 @@
+rank,ticker,market_cap,sector
+1,MMM,,Industrials
+2,AOS,,Industrials
+3,ABT,,Health Care
+4,ABBV,,Health Care
+5,ACN,,Information Technology
+6,ADBE,,Information Technology
+7,AMD,,Information Technology
+8,AES,,Utilities
+9,AFL,,Financials
+10,A,,Health Care
+11,APD,,Materials
+12,ABNB,,Consumer Discretionary
+13,AKAM,,Information Technology
+14,ALB,,Materials
+15,ARE,,Real Estate
+16,ALGN,,Health Care
+17,ALLE,,Industrials
+18,LNT,,Utilities
+19,ALL,,Financials
+20,GOOGL,,Communication Services
+21,MO,,Consumer Staples
+22,AMZN,,Consumer Discretionary
+23,AMCR,,Materials
+24,AEE,,Utilities
+25,AEP,,Utilities
+26,AXP,,Financials
+27,AIG,,Financials
+28,AMT,,Real Estate
+29,AWK,,Utilities
+30,AMP,,Financials
+31,AME,,Industrials
+32,AMGN,,Health Care
+33,APH,,Information Technology
+34,ADI,,Information Technology
+35,AON,,Financials
+36,APA,,Energy
+37,APO,,Financials
+38,AAPL,,Information Technology
+39,AMAT,,Information Technology
+40,APP,,Communication Services
+41,APTV,,Consumer Discretionary
+42,ACGL,,Financials
+43,ADM,,Consumer Staples
+44,ARES,,Financials
+45,ANET,,Information Technology
+46,AJG,,Financials
+47,AIZ,,Financials
+48,T,,Communication Services
+49,ATO,,Utilities
+50,ADSK,,Information Technology
+51,ADP,,Industrials
+52,AZO,,Consumer Discretionary
+53,AVY,,Materials
+54,AXON,,Industrials
+55,BKR,,Energy
+56,BALL,,Materials
+57,BAC,,Financials
+58,BAX,,Health Care
+59,BDX,,Health Care
+60,BRK-B,,Financials
+61,BBY,,Consumer Discretionary
+62,TECH,,Health Care
+63,BIIB,,Health Care
+64,BLK,,Financials
+65,BX,,Financials
+66,XYZ,,Financials
+67,BE,,Industrials
+68,BNY,,Financials
+69,BA,,Industrials
+70,BKNG,,Consumer Discretionary
+71,BSX,,Health Care
+72,BMY,,Health Care
+73,AVGO,,Information Technology
+74,BR,,Industrials
+75,BRO,,Financials
+76,BF-B,,Consumer Staples
+77,BG,,Consumer Staples
+78,BXP,,Real Estate
+79,CHRW,,Industrials
+80,CDNS,,Information Technology
+81,CPT,,Real Estate
+82,COF,,Financials
+83,CAH,,Health Care
+84,CCL,,Consumer Discretionary
+85,CARR,,Industrials
+86,CVNA,,Consumer Discretionary
+87,CASY,,Consumer Staples
+88,CAT,,Industrials
+89,CBOE,,Financials
+90,CBRE,,Real Estate
+91,CDW,,Information Technology
+92,COR,,Health Care
+93,CNC,,Health Care
+94,CNP,,Utilities
+95,CF,,Materials
+96,CRL,,Health Care
+97,SCHW,,Financials
+98,CHTR,,Communication Services
+99,CVX,,Energy
+100,CMG,,Consumer Discretionary
+101,CB,,Financials
+102,CHD,,Consumer Staples
+103,CIEN,,Information Technology
+104,CI,,Health Care
+105,CINF,,Financials
+106,CTAS,,Industrials
+107,CSCO,,Information Technology
+108,C,,Financials
+109,CFG,,Financials
+110,CLX,,Consumer Staples
+111,CME,,Financials
+112,CMS,,Utilities
+113,KO,,Consumer Staples
+114,CTSH,,Information Technology
+115,COHR,,Information Technology
+116,COIN,,Financials
+117,CL,,Consumer Staples
+118,CMCSA,,Communication Services
+119,FIX,,Industrials
+120,COP,,Energy
+121,ED,,Utilities
+122,STZ,,Consumer Staples
+123,CEG,,Utilities
+124,COO,,Health Care
+125,CPRT,,Industrials
+126,GLW,,Information Technology
+127,CPAY,,Financials
+128,CSGP,,Real Estate
+129,COST,,Consumer Staples
+130,CRH,,Materials
+131,CRWD,,Information Technology
+132,CCI,,Real Estate
+133,CSX,,Industrials
+134,CMI,,Industrials
+135,CVS,,Health Care
+136,DHR,,Health Care
+137,DRI,,Consumer Discretionary
+138,DDOG,,Information Technology
+139,DVA,,Health Care
+140,DECK,,Consumer Discretionary
+141,DE,,Industrials
+142,DELL,,Information Technology
+143,DAL,,Industrials
+144,DVN,,Energy
+145,DXCM,,Health Care
+146,FANG,,Energy
+147,DLR,,Real Estate
+148,DG,,Consumer Staples
+149,DLTR,,Consumer Staples
+150,D,,Utilities
+151,DPZ,,Consumer Discretionary
+152,DASH,,Consumer Discretionary
+153,DOV,,Industrials
+154,DOW,,Materials
+155,DHI,,Consumer Discretionary
+156,DTE,,Utilities
+157,DUK,,Utilities
+158,DD,,Industrials
+159,ETN,,Industrials
+160,EBAY,,Consumer Discretionary
+161,ECHO,,Communication Services
+162,ECL,,Materials
+163,EIX,,Utilities
+164,EW,,Health Care
+165,ELV,,Health Care
+166,EME,,Industrials
+167,EMR,,Industrials
+168,ETR,,Utilities
+169,EOG,,Energy
+170,EQT,,Energy
+171,EFX,,Industrials
+172,EQIX,,Real Estate
+173,ERIE,,Financials
+174,ESS,,Real Estate
+175,EL,,Consumer Staples
+176,EG,,Financials
+177,EVRG,,Utilities
+178,P,,Information Technology
+179,ES,,Utilities
+180,EXC,,Utilities
+181,EXE,,Energy
+182,EXPE,,Consumer Discretionary
+183,EXPD,,Industrials
+184,EXR,,Real Estate
+185,XOM,,Energy
+186,FFIV,,Information Technology
+187,FDS,,Financials
+188,FICO,,Information Technology
+189,FAST,,Industrials
+190,FRT,,Real Estate
+191,FDX,,Industrials
+192,FDXF,,Industrials
+193,FERG,,Industrials
+194,FIS,,Financials
+195,FITB,,Financials
+196,FSLR,,Information Technology
+197,FE,,Utilities
+198,FISV,,Financials
+199,FLEX,,Information Technology
+200,F,,Consumer Discretionary
+201,FTNT,,Information Technology
+202,FTV,,Industrials
+203,FOXA,,Communication Services
+204,BEN,,Financials
+205,FCX,,Materials
+206,GRMN,,Consumer Discretionary
+207,IT,,Information Technology
+208,GE,,Industrials
+209,GEHC,,Health Care
+210,GEV,,Industrials
+211,GEN,,Information Technology
+212,GNRC,,Industrials
+213,GD,,Industrials
+214,GIS,,Consumer Staples
+215,GM,,Consumer Discretionary
+216,GPC,,Consumer Discretionary
+217,GILD,,Health Care
+218,GPN,,Financials
+219,GL,,Financials
+220,GDDY,,Information Technology
+221,GS,,Financials
+222,HAL,,Energy
+223,HIG,,Financials
+224,HAS,,Consumer Discretionary
+225,HCA,,Health Care
+226,DOC,,Real Estate
+227,HSIC,,Health Care
+228,HSY,,Consumer Staples
+229,HPE,,Information Technology
+230,HLT,,Consumer Discretionary
+231,HD,,Consumer Discretionary
+232,HONA,,Industrials
+233,HON,,Industrials
+234,HRL,,Consumer Staples
+235,HST,,Real Estate
+236,HWM,,Industrials
+237,HPQ,,Information Technology
+238,HUBB,,Industrials
+239,HUM,,Health Care
+240,HBAN,,Financials
+241,HII,,Industrials
+242,IBM,,Information Technology
+243,IEX,,Industrials
+244,IDXX,,Health Care
+245,ITW,,Industrials
+246,ILMN,,Health Care
+247,INCY,,Health Care
+248,IR,,Industrials
+249,PODD,,Health Care
+250,INTC,,Information Technology
+251,IBKR,,Financials
+252,ICE,,Financials
+253,IFF,,Materials
+254,IP,,Materials
+255,INTU,,Information Technology
+256,ISRG,,Health Care
+257,IVZ,,Financials
+258,INVH,,Real Estate
+259,IQV,,Health Care
+260,IRM,,Real Estate
+261,JBHT,,Industrials
+262,JBL,,Information Technology
+263,JKHY,,Financials
+264,J,,Industrials
+265,JNJ,,Health Care
+266,JCI,,Industrials
+267,JPM,,Financials
+268,KVUE,,Consumer Staples
+269,KDP,,Consumer Staples
+270,KEY,,Financials
+271,KEYS,,Information Technology
+272,KMB,,Consumer Staples
+273,KIM,,Real Estate
+274,KMI,,Energy
+275,KKR,,Financials
+276,KLAC,,Information Technology
+277,KHC,,Consumer Staples
+278,KR,,Consumer Staples
+279,LHX,,Industrials
+280,LH,,Health Care
+281,LRCX,,Information Technology
+282,LVS,,Consumer Discretionary
+283,LDOS,,Industrials
+284,LEN,,Consumer Discretionary
+285,LII,,Industrials
+286,LLY,,Health Care
+287,LIN,,Materials
+288,LYV,,Communication Services
+289,LMT,,Industrials
+290,L,,Financials
+291,LOW,,Consumer Discretionary
+292,LULU,,Consumer Discretionary
+293,LITE,,Information Technology
+294,LYB,,Materials
+295,MTB,,Financials
+296,MPC,,Energy
+297,MAR,,Consumer Discretionary
+298,MRSH,,Financials
+299,MLM,,Materials
+300,MRVL,,Information Technology
+301,MAS,,Industrials
+302,MA,,Financials
+303,MKC,,Consumer Staples
+304,MCD,,Consumer Discretionary
+305,MCK,,Health Care
+306,MDT,,Health Care
+307,MRK,,Health Care
+308,META,,Communication Services
+309,MET,,Financials
+310,MTD,,Health Care
+311,MGM,,Consumer Discretionary
+312,MCHP,,Information Technology
+313,MU,,Information Technology
+314,MSFT,,Information Technology
+315,MAA,,Real Estate
+316,MRNA,,Health Care
+317,MDLZ,,Consumer Staples
+318,MPWR,,Information Technology
+319,MNST,,Consumer Staples
+320,MCO,,Financials
+321,MS,,Financials
+322,MOS,,Materials
+323,MSI,,Information Technology
+324,MSCI,,Financials
+325,NDAQ,,Financials
+326,NTAP,,Information Technology
+327,NFLX,,Communication Services
+328,NEM,,Materials
+329,NWSA,,Communication Services
+330,NEE,,Utilities
+331,NKE,,Consumer Discretionary
+332,NI,,Utilities
+333,NDSN,,Industrials
+334,NSC,,Industrials
+335,NTRS,,Financials
+336,NOC,,Industrials
+337,NCLH,,Consumer Discretionary
+338,NRG,,Utilities
+339,NUE,,Materials
+340,NVDA,,Information Technology
+341,NVR,,Consumer Discretionary
+342,NXPI,,Information Technology
+343,ORLY,,Consumer Discretionary
+344,OXY,,Energy
+345,ODFL,,Industrials
+346,OMC,,Communication Services
+347,ON,,Information Technology
+348,OKE,,Energy
+349,ORCL,,Information Technology
+350,OTIS,,Industrials
+351,PCAR,,Industrials
+352,PKG,,Materials
+353,PLTR,,Information Technology
+354,PANW,,Information Technology
+355,PH,,Industrials
+356,PAYX,,Industrials
+357,PYPL,,Financials
+358,PNR,,Industrials
+359,PEP,,Consumer Staples
+360,PFE,,Health Care
+361,PCG,,Utilities
+362,PM,,Consumer Staples
+363,PSX,,Energy
+364,PNW,,Utilities
+365,PNC,,Financials
+366,PPG,,Materials
+367,PPL,,Utilities
+368,PFG,,Financials
+369,PG,,Consumer Staples
+370,PGR,,Financials
+371,PLD,,Real Estate
+372,PRU,,Financials
+373,PTC,,Information Technology
+374,PEG,,Utilities
+375,PSA,,Real Estate
+376,PHM,,Consumer Discretionary
+377,Q,,Information Technology
+378,QCOM,,Information Technology
+379,PWR,,Industrials
+380,DGX,,Health Care
+381,RL,,Consumer Discretionary
+382,RJF,,Financials
+383,RDDT,,Communication Services
+384,O,,Real Estate
+385,REG,,Real Estate
+386,REGN,,Health Care
+387,RF,,Financials
+388,RSG,,Industrials
+389,RMD,,Health Care
+390,RVTY,,Health Care
+391,HOOD,,Financials
+392,ROK,,Industrials
+393,ROL,,Industrials
+394,ROP,,Information Technology
+395,ROST,,Consumer Discretionary
+396,RCL,,Consumer Discretionary
+397,RTX,,Industrials
+398,SPGI,,Financials
+399,CRM,,Information Technology
+400,SNDK,,Information Technology
+401,SBAC,,Real Estate
+402,SLB,,Energy
+403,STX,,Information Technology
+404,SRE,,Utilities
+405,NOW,,Information Technology
+406,SHW,,Materials
+407,SPG,,Real Estate
+408,SKYD,,Communication Services
+409,SWKS,,Information Technology
+410,SJM,,Consumer Staples
+411,SW,,Materials
+412,SNA,,Industrials
+413,SOLV,,Health Care
+414,SO,,Utilities
+415,LUV,,Industrials
+416,SWK,,Industrials
+417,SBUX,,Consumer Discretionary
+418,STT,,Financials
+419,STLD,,Materials
+420,STE,,Health Care
+421,SYK,,Health Care
+422,SMCI,,Information Technology
+423,SYF,,Financials
+424,SNPS,,Information Technology
+425,SYY,,Consumer Staples
+426,TMUS,,Communication Services
+427,TROW,,Financials
+428,TTWO,,Communication Services
+429,TPR,,Consumer Discretionary
+430,TRGP,,Energy
+431,TGT,,Consumer Staples
+432,TEL,,Information Technology
+433,TDY,,Information Technology
+434,TER,,Information Technology
+435,TSLA,,Consumer Discretionary
+436,TXN,,Information Technology
+437,TPL,,Energy
+438,TXT,,Industrials
+439,TMO,,Health Care
+440,TJX,,Consumer Discretionary
+441,TKO,,Communication Services
+442,TSCO,,Consumer Discretionary
+443,TT,,Industrials
+444,TDG,,Industrials
+445,TRV,,Financials
+446,TRMB,,Information Technology
+447,TFC,,Financials
+448,TWLO,,Information Technology
+449,TYL,,Information Technology
+450,TSN,,Consumer Staples
+451,USB,,Financials
+452,UBER,,Industrials
+453,UDR,,Real Estate
+454,ULTA,,Consumer Discretionary
+455,UNP,,Industrials
+456,UAL,,Industrials
+457,UPS,,Industrials
+458,URI,,Industrials
+459,UNH,,Health Care
+460,UHS,,Health Care
+461,VLO,,Energy
+462,VEEV,,Health Care
+463,VTR,,Real Estate
+464,VLTO,,Industrials
+465,VRSN,,Information Technology
+466,VRSK,,Industrials
+467,VZ,,Communication Services
+468,VRTX,,Health Care
+469,VRT,,Industrials
+470,VTRS,,Health Care
+471,VICI,,Real Estate
+472,V,,Financials
+473,VST,,Utilities
+474,VMRK,,Real Estate
+475,VMC,,Materials
+476,VYLR,,Consumer Staples
+477,WRB,,Financials
+478,GWW,,Industrials
+479,WAB,,Industrials
+480,WMT,,Consumer Staples
+481,DIS,,Communication Services
+482,WM,,Industrials
+483,WAT,,Health Care
+484,WEC,,Utilities
+485,WFC,,Financials
+486,WELL,,Real Estate
+487,WST,,Health Care
+488,WDC,,Information Technology
+489,WY,,Real Estate
+490,WSM,,Consumer Discretionary
+491,WMB,,Energy
+492,WTW,,Financials
+493,WDAY,,Information Technology
+494,WYNN,,Consumer Discretionary
+495,XEL,,Utilities
+496,XYL,,Industrials
+497,YUM,,Consumer Discretionary
+498,ZBRA,,Information Technology
+499,ZBH,,Health Care
+500,ZTS,,Health Care

@@ -2,7 +2,7 @@
 QF600 group project - data download
 
 Downloads:
-  1. Top 100 S&P 500 stocks by market cap
+  1. S&P 500 constituents (all of them, or the top N by market cap)
   2. Daily adjusted prices (total return, dividends reinvested) and volume, 2016-2025
   3. Daily Fama-French 5 factors, momentum, and short-term reversal (Ken French library)
 
@@ -24,12 +24,14 @@ import yfinance as yf
 
 START = "2016-01-01"
 END = "2026-01-01"          # yfinance end date is exclusive, so this includes 2025-12-31
-N_STOCKS = 100
-OUT_DIR = "data"
+N_STOCKS = None             # None = all S&P 500 stocks, or e.g. 100 for the top 100 by market cap
+OUT_DIR = "data_sp500"      # separate folder so the top-100 data in data/ is kept
+BATCH_SIZE = 100            # tickers per Yahoo download request
 
 # Drop the second share class when a company has two in the index.
-# GOOG and GOOGL are the same company, so they would always be the "best" pair.
-DROP_TICKERS = ["GOOG"]
+# GOOG/GOOGL, FOX/FOXA and NWS/NWSA are the same company twice,
+# so they would always be the "best" pair.
+DROP_TICKERS = ["GOOG", "FOX", "NWS"]
 
 FRENCH_BASE = "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/"
 FRENCH_FILES = {
@@ -101,51 +103,72 @@ def pick_top_stocks(caps, n):
             continue
         if caps[t] is None:
             continue
-        ranked.append((t, caps[t]))
+        ranked.append((caps[t], t))
 
     # sort by market cap, largest first
-    ranked.sort(key=lambda pair: pair[1], reverse=True)
+    ranked.sort(reverse=True)
 
     top = []
     for i in range(min(n, len(ranked))):
-        top.append(ranked[i])
+        cap, t = ranked[i]
+        top.append((t, cap))
     return top
 
 
-def download_prices(tickers):
+def download_batch(tickers):
     # auto_adjust=False keeps the raw OHLC plus a separate "Adj Close".
     # Adj Close is adjusted for splits AND dividends, which is the
     # total return index the paper uses.
-    raw = yf.download(
-        tickers,
-        start=START,
-        end=END,
-        auto_adjust=False,
-        progress=True,
-        group_by="column",
-    )
+    for attempt in range(3):
+        try:
+            raw = yf.download(
+                tickers,
+                start=START,
+                end=END,
+                auto_adjust=False,
+                progress=False,
+                group_by="column",
+                threads=True,
+            )
+            if len(raw) > 0:
+                return raw
+        except Exception as e:
+            print("    download failed (attempt", attempt + 1, "):", e)
+        time.sleep(10)
+    return None
 
-    # long format: one row per (date, ticker) with full OHLCV
-    rows = []
-    for t in tickers:
-        for date in raw.index:
-            close = raw["Close"][t][date]
-            if pd.isna(close):
-                continue
-            rows.append({
-                "date": date,
-                "ticker": t,
-                "open": raw["Open"][t][date],
-                "high": raw["High"][t][date],
-                "low": raw["Low"][t][date],
-                "close": close,
-                "adj_close": raw["Adj Close"][t][date],
-                "volume": raw["Volume"][t][date],
-            })
-    ohlcv = pd.DataFrame(rows)
 
-    prices = raw["Adj Close"]
-    volume = raw["Volume"]
+def download_prices(tickers):
+    long_frames = []
+    for start in range(0, len(tickers), BATCH_SIZE):
+        batch = tickers[start:start + BATCH_SIZE]
+        print("  tickers", start + 1, "to", start + len(batch), "of", len(tickers))
+        raw = download_batch(batch)
+        if raw is None:
+            print("    giving up on this batch:", batch)
+            continue
+
+        # wide (field x ticker columns) -> long: one row per (date, ticker)
+        try:
+            long = raw.stack(level=1, future_stack=True).reset_index()
+        except TypeError:
+            long = raw.stack(level=1, dropna=False).reset_index()   # older pandas
+        long.columns.name = None
+        long = long.rename(columns={
+            "Date": "date", "Ticker": "ticker", "level_1": "ticker",
+            "Open": "open", "High": "high", "Low": "low", "Close": "close",
+            "Adj Close": "adj_close", "Volume": "volume",
+        })
+        long = long.dropna(subset=["close"])
+        long_frames.append(long[["date", "ticker", "open", "high", "low",
+                                 "close", "adj_close", "volume"]])
+        time.sleep(2)
+
+    ohlcv = pd.concat(long_frames, ignore_index=True)
+    ohlcv = ohlcv.sort_values(["date", "ticker"]).reset_index(drop=True)
+
+    prices = ohlcv.pivot(index="date", columns="ticker", values="adj_close")
+    volume = ohlcv.pivot(index="date", columns="ticker", values="volume")
     return ohlcv, prices, volume
 
 
@@ -239,22 +262,35 @@ def main():
     tickers, sectors = get_sp500_tickers()
     print("  found", len(tickers), "tickers")
 
-    print("2. Getting market caps")
-    caps = get_market_caps(tickers)
-    top = pick_top_stocks(caps, N_STOCKS)
+    if N_STOCKS is None:
+        print("2. Using all S&P 500 stocks (no market cap ranking)")
+        universe_rows = []
+        for t in tickers:
+            if t in DROP_TICKERS:
+                continue
+            universe_rows.append({
+                "rank": len(universe_rows) + 1,
+                "ticker": t,
+                "market_cap": None,
+                "sector": sectors.get(t, ""),
+            })
+    else:
+        print("2. Getting market caps")
+        caps = get_market_caps(tickers)
+        top = pick_top_stocks(caps, N_STOCKS)
+        universe_rows = []
+        for rank in range(len(top)):
+            t = top[rank][0]
+            universe_rows.append({
+                "rank": rank + 1,
+                "ticker": t,
+                "market_cap": top[rank][1],
+                "sector": sectors.get(t, ""),
+            })
 
-    universe_rows = []
-    for rank in range(len(top)):
-        t = top[rank][0]
-        universe_rows.append({
-            "rank": rank + 1,
-            "ticker": t,
-            "market_cap": top[rank][1],
-            "sector": sectors.get(t, ""),
-        })
     universe = pd.DataFrame(universe_rows)
     universe.to_csv(os.path.join(OUT_DIR, "universe.csv"), index=False)
-    print("  saved universe.csv")
+    print("  saved universe.csv:", len(universe), "tickers")
 
     top_tickers = []
     for row in universe_rows:
@@ -272,6 +308,13 @@ def main():
     report.to_csv(os.path.join(OUT_DIR, "data_quality.csv"), index=False)
     n_short = int((report["full_history"] == False).sum())
     print("  stocks without full 2016 history:", n_short)
+
+    missing = []
+    for t in top_tickers:
+        if t not in prices.columns:
+            missing.append(t)
+    if len(missing) > 0:
+        print("  no data returned for:", missing)
 
     print("4. Downloading Fama-French factors")
     factors = download_factors()
