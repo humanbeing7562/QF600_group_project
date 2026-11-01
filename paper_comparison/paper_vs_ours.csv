@@ -1,0 +1,34 @@
+portfolio,measure,Paper (1962-2002),Ours: top 100,Ours: S&P 500
+Top 5,"Monthly return, fully invested",0.75%,-0.06%,-0.06%
+Top 5,"Newey-West t-stat, fully invested",6.26,-0.33,-0.44
+Top 5,"Monthly return, committed capital",0.46%,0.01%,-0.05%
+Top 5,"Monthly volatility, fully invested",2.10%,2.02%,1.59%
+Top 5,"Annualized Sharpe, fully invested",1.21,-0.11,-0.13
+Top 5,"Losing months, fully invested",35%,56%,50%
+Top 5,Return lost by waiting one day (per month),0.56%,0.04%,-0.03%
+Top 5,2-sigma trigger gap,4.76%,6.22%,3.52%
+Top 5,Pairs opened per 6-month window,4.81,4.60,4.76
+Top 5,Round trips per pair,2.02,1.40,1.46
+Top 5,Months open per pair,3.75,3.49,3.56
+Top 20,"Monthly return, fully invested",0.90%,0.01%,0.00%
+Top 20,"Newey-West t-stat, fully invested",9.29,0.06,0.01
+Top 20,"Monthly return, committed capital",0.52%,0.01%,-0.00%
+Top 20,"Monthly volatility, fully invested",1.53%,1.60%,1.23%
+Top 20,"Annualized Sharpe, fully invested",2.04,0.02,0.00
+Top 20,"Losing months, fully invested",23%,49%,53%
+Top 20,Return lost by waiting one day (per month),0.54%,0.05%,0.03%
+Top 20,2-sigma trigger gap,5.28%,7.40%,4.25%
+Top 20,Pairs opened per 6-month window,19.30,18.66,18.63
+Top 20,Round trips per pair,1.96,1.37,1.42
+Top 20,Months open per pair,3.76,3.39,3.45
+Pairs 101-120,"Monthly return, fully invested",0.80%,-0.24%,0.06%
+Pairs 101-120,"Newey-West t-stat, fully invested",9.40,-1.44,0.50
+Pairs 101-120,"Monthly return, committed capital",0.50%,-0.05%,0.08%
+Pairs 101-120,"Monthly volatility, fully invested",1.44%,2.20%,1.39%
+Pairs 101-120,"Annualized Sharpe, fully invested",1.91,-0.38,0.15
+Pairs 101-120,"Losing months, fully invested",28%,56%,50%
+Pairs 101-120,Return lost by waiting one day (per month),0.28%,0.02%,0.04%
+Pairs 101-120,2-sigma trigger gap,7.56%,11.00%,6.67%
+Pairs 101-120,Pairs opened per 6-month window,19.41,17.53,18.79
+Pairs 101-120,Round trips per pair,1.78,1.23,1.46
+Pairs 101-120,Months open per pair,3.98,3.29,3.57
